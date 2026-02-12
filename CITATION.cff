@@ -1,0 +1,62 @@
+# Citation
+
+If you use this Distributed Systems repository in academic work, research, or publications, please cite it as:
+
+```bibtex
+@software{navinbr_distributed_systems_2026,
+  author = {navinBRuas},
+  title = {Distributed Systems: Educational Reference Implementation},
+  year = {2026},
+  url = {https://github.com/navinBRuas/distributed-systems},
+  note = {Comprehensive educational implementations of distributed systems algorithms and patterns}
+}
+```
+
+## Citation Formats
+
+### BibTeX
+```bibtex
+@software{navinbr_distributed_systems_2026,
+  author = {navinBRuas},
+  title = {Distributed Systems: Educational Reference Implementation},
+  year = {2026},
+  url = {https://github.com/navinBRuas/distributed-systems},
+}
+```
+
+### APA
+navinBRuas. (2026). *Distributed Systems: Educational Reference Implementation* [Software]. https://github.com/navinBRuas/distributed-systems
+
+### MLA
+navinBRuas. "Distributed Systems: Educational Reference Implementation." GitHub, 2026, https://github.com/navinBRuas/distributed-systems.
+
+### Chicago
+navinBRuas. "Distributed Systems: Educational Reference Implementation." Accessed January 5, 2026. https://github.com/navinBRuas/distributed-systems.
+
+## Citing Specific Modules
+
+If citing a specific module or algorithm:
+
+```bibtex
+@software{navinbr_distributed_systems_raft_2026,
+  author = {navinBRuas},
+  title = {Raft Consensus Protocol Implementation},
+  year = {2026},
+  url = {https://github.com/navinBRuas/distributed-systems/tree/main/raft-from-scratch},
+  note = {Educational implementation in the Distributed Systems repository}
+}
+```
+
+Replace "Raft Consensus Protocol" and the module path with the specific module you're citing.
+
+## Acknowledgments
+
+See [ACKNOWLEDGMENTS.md](ACKNOWLEDGMENTS.md) for recognition of contributors and references.
+
+## License
+
+Please note that this work is licensed under the [LICENSE](LICENSE). Proper attribution is required.
+
+---
+
+Thank you for citing this work! It helps support the project and benefits other researchers.

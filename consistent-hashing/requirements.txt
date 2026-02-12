@@ -1,0 +1,3 @@
+# Core dependencies - Python standard library only
+# Optional dependencies:
+# mmh3>=3.0.0  # For MurmurHash3 (faster than MD5)

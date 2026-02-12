@@ -1,0 +1,28 @@
+# Repository Ownership and Responsibility
+
+# Default owner for all files in the repository
+* @navinBRuas
+
+# Governance and community files
+CODEOWNERS @navinBRuas
+CODE_OF_CONDUCT.md @navinBRuas
+GOVERNANCE.md @navinBRuas
+CONTRIBUTING.md @navinBRuas
+
+# Security and legal files
+SECURITY.md @navinBRuas
+LICENSE @navinBRuas
+ACKNOWLEDGMENTS.md @navinBRuas
+
+# Core project files
+# Default ownership
+* @navinBRuas
+
+# Add per-path overrides below if needed
+# docs/* @navinBRuas
+# submodule-name/* @owner1 @owner2
+/quorum-systems/ @navinBRuas
+/raft-from-scratch/ @navinBRuas
+/rate-limiting/ @navinBRuas
+/service-discovery/ @navinBRuas
+/vector-clocks-advanced/ @navinBRuas

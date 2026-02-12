@@ -1,0 +1,5 @@
+# Core dependencies - Python standard library only
+
+# Optional dependencies:
+pyyaml>=6.0  # For scenario configuration files
+pytest>=7.0  # For test framework integration

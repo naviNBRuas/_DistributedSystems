@@ -1,0 +1,2 @@
+# Core dependencies - Python standard library only
+# hashlib (stdlib) - for cryptographic hashing

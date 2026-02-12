@@ -1,0 +1,5 @@
+# Core dependencies - Python standard library only
+# Optional dependencies for backends:
+# redis>=4.0.0       # For Redis backend
+# kazoo>=2.8.0       # For ZooKeeper backend
+# etcd3>=0.12.0      # For etcd backend

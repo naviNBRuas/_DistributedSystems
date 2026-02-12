@@ -1,0 +1,87 @@
+# Python
+__pycache__/
+*.py[cod]
+# OS / editors
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# Logs and temp
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.tmp/
+tmp/
+.cache/
+
+# Environments / secrets
+.env
+.env.*
+*.env
+*.pem
+*.key
+.secrets/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+.build/
+build/
+dist/
+.eggs/
+*.egg-info/
+.python-version
+.venv/
+venv/
+.tox/
+.pytest_cache/
+.coverage*
+htmlcov/
+.mypy_cache/
+.dmypy.json
+.pyre/
+.pytype/
+
+# Node / frontend
+node_modules/
+.npm/
+.pnpm-store/
+.bun/
+bun.lockb
+.next/
+.nuxt/
+.vite/
+dist/
+build/
+coverage/
+.turbo/
+.storybook-out/
+
+# Go / Rust / generic build
+bin/
+obj/
+target/
+coverage.out
+
+# Artifacts
+*.tar
+*.tar.gz
+*.zip
+*.tgz
+*.tgz
+*.bak
+
+# Cloud/infra
+.terraform/
+*.tfstate*
+.env

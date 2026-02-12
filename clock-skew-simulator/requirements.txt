@@ -1,0 +1,4 @@
+# Core dependencies - Python standard library only
+# Optional dependencies for visualization:
+# matplotlib>=3.5.0
+# networkx>=2.6.0
