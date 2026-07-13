@@ -9,11 +9,10 @@ description = "A toolkit for simulating network partitions and failures in distr
 readme = "README.md"
 requires-python = ">=3.9"
 license = {text = "MIT"}
-dependencies = []
+dependencies = ["pyyaml"]
 
 [project.optional-dependencies]
 dev = ["pytest"]
-yaml = ["pyyaml"]
 
 [tool.setuptools]
 package-dir = {"network_partition_tester" = "src"}
