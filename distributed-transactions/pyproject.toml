@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "distributed-transactions"
+version = "1.0.0"
+description = "Two-phase commit, three-phase commit, and Saga pattern implementations for distributed transaction coordination."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools]
+package-dir = {"distributed_transactions" = "src"}
+packages = ["distributed_transactions"]

@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "clock-skew-simulator"
+version = "1.0.0"
+description = "A comprehensive toolkit for understanding and experimenting with time, causality, and clock synchronization in distributed systems."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools]
+package-dir = {"clock_skew_simulator" = "src"}
+packages = ["clock_skew_simulator"]

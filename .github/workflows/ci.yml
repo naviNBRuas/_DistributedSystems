@@ -1,0 +1,50 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test-python:
+    name: test (${{ matrix.package }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        package:
+          - bloom-filters
+          - byzantine-consensus
+          - clock-skew-simulator
+          - consistent-hashing
+          - crdt
+          - distributed-locks
+          - distributed-tracing
+          - distributed-transactions
+          - eventual-consistency-patterns
+          - gossip-protocol
+          - leader-election
+          - merkle-trees
+          - network-partition-tester
+          - quorum-systems
+          - raft-from-scratch
+          - rate-limiting
+          - service-discovery
+          - vector-clocks-advanced
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install package
+        working-directory: ${{ matrix.package }}
+        run: pip install -e ".[dev]" pytest
+      - name: Run tests
+        working-directory: ${{ matrix.package }}
+        run: python -m pytest tests -v
+      - name: Build distribution
+        working-directory: ${{ matrix.package }}
+        run: |
+          pip install build
+          python -m build

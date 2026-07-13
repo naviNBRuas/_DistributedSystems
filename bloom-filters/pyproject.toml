@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bloom-filters"
+version = "1.0.0"
+description = "Space-efficient probabilistic data structures for membership testing in distributed systems."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools]
+package-dir = {"bloom_filters" = "src"}
+packages = ["bloom_filters"]

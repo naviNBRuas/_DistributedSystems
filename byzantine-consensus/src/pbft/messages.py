@@ -2,7 +2,7 @@ import json
 import time
 from dataclasses import dataclass, asdict, field
 from enum import Enum
-from typing import Any, Dict, Optional
+from typing import Any, Dict, List, Optional
 
 class MessageType(str, Enum):
     REQUEST = "REQUEST"

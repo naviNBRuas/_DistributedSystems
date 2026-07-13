@@ -1,0 +1,56 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "*-v*.*.*"
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Package tag to release, e.g. raft-from-scratch-v1.0.0"
+        required: true
+
+jobs:
+  release:
+    name: release (${{ github.event.inputs.tag || github.ref_name }})
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.tag || github.ref_name }}
+
+      - name: Derive package name and version from tag
+        id: tag
+        run: |
+          TAG="${{ github.event.inputs.tag || github.ref_name }}"
+          PACKAGE="${TAG%-v*}"
+          VERSION="${TAG##*-v}"
+          echo "package=${PACKAGE}" >> "$GITHUB_OUTPUT"
+          echo "version=${VERSION}" >> "$GITHUB_OUTPUT"
+          echo "tag=${TAG}" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install and test
+        working-directory: ${{ steps.tag.outputs.package }}
+        run: |
+          pip install -e ".[dev]" pytest
+          python -m pytest tests -v
+
+      - name: Build distribution
+        working-directory: ${{ steps.tag.outputs.package }}
+        run: |
+          pip install build
+          python -m build
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.tag.outputs.tag }}
+          name: "${{ steps.tag.outputs.package }} v${{ steps.tag.outputs.version }}"
+          body_path: ${{ steps.tag.outputs.package }}/CHANGELOG.md
+          files: ${{ steps.tag.outputs.package }}/dist/*

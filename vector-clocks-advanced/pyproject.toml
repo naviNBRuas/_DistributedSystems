@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vector-clocks-advanced"
+version = "1.0.0"
+description = "Advanced vector clock implementations including dotted version vectors and interval tree clocks."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools]
+package-dir = {"vector_clocks_advanced" = "src"}
+packages = ["vector_clocks_advanced"]

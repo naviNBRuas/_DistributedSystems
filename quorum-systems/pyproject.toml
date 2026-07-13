@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quorum-systems"
+version = "1.0.0"
+description = "Fault-tolerant coordination mechanisms using quorum-based replication for distributed data consistency."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools]
+package-dir = {"quorum_systems" = "src"}
+packages = ["quorum_systems"]

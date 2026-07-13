@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "raft-from-scratch"
+version = "1.0.0"
+description = "A production-grade implementation of the Raft consensus algorithm built from first principles."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools]
+package-dir = {"raft_from_scratch" = "src"}
+packages = ["raft_from_scratch"]

@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gossip-protocol"
+version = "1.0.0"
+description = "A production-ready implementation of epidemic-style gossip protocols for decentralized state propagation."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools]
+package-dir = {"gossip_protocol" = "src"}
+packages = ["gossip_protocol"]
